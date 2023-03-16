@@ -1,0 +1,40 @@
+.content {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+}
+
+.left-column {
+    height: 100%;
+}
+
+.line {
+    background-color: black;
+    height: 100%;
+}
+
+.formation p {
+    margin: 2px;
+    padding: 0;
+}
+
+.formation p:not(.italic){
+    color: brown;
+}
+
+.adjacent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10%;
+}
+
+.adjacent img {
+    border-radius: 50%;
+    max-width: 10%;
+    object-fit: contain;
+}
+
+.italic {
+    font-style: italic;
+}

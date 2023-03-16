@@ -1,0 +1,119 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(151, 229, 255);
+    background-image: url('../img/nature.png');
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-size: 200%;
+    background-position: 0 0;
+    background-attachment: fixed;
+    overflow: hidden;
+    animation: move 1s linear 0 infinite alternate;
+    animation-timing-function: steps(20);
+    -webkit-animation-timing-function: steps(20);
+}
+
+@-webkit-keyframes move {
+    from {
+        background-position: 0 0;
+    }to {
+        background-position: 100% 0;
+    }
+}
+
+@keyframes move {
+    from {
+        background-position: 0 0;
+    }to {
+        background-position: 100% 0;
+    }
+}
+
+img {
+    border: 3px green solid;
+}
+
+h1, p, a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    color: brown;
+    font-size: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+
+    width: 80%;
+    height: 9%;
+
+    margin: 0 10% 0 10%;
+    padding: 2%;
+}
+
+nav a {
+    cursor: pointer;
+
+    background-color: #FFF;
+    backdrop-filter: blur(2px);
+
+    padding: 0 3% 0 3%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-left: 10px solid brown;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+
+    color: brown;
+}
+
+/* nav div:hover{
+    background-color: brown;
+    border-radius: 7px;
+    color: white;
+} */
+
+nav a:hover {
+    border-left-color: rgb(0, 134, 56);
+    color: rgb(0, 134, 56);
+}
+
+/* nav div:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+} */
+
+nav p {
+    font-size: medium;
+    text-align: center;
+    color: inherit;
+    font-weight: bold;
+}
+
+main {
+    margin: 2% 10% 0 10%;
+    padding: 2%;
+
+    width: 80%;
+
+    background-color: #FFF;
+    backdrop-filter: blur(2px);
+
+    border-radius: 10px;
+}
