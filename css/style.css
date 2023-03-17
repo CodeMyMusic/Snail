@@ -5,33 +5,138 @@ html, body {
     padding: 0;
 }
 
-body {
-    background-color: rgb(151, 229, 255);
-    background-image: url('../img/nature.png');
-    background-size: contain;
-    background-repeat: repeat-x;
-    background-size: 200%;
-    background-position: 0 0;
-    background-attachment: fixed;
-    overflow: hidden;
-    animation: move 1s linear 0 infinite alternate;
-    animation-timing-function: steps(20);
-    -webkit-animation-timing-function: steps(20);
+@font-face {
+    font-family: "ClimateCrisis";
+    src: url("../fonts/ClimateCrisis.ttf") format("woff");
 }
 
-@-webkit-keyframes move {
-    from {
-        background-position: 0 0;
-    }to {
-        background-position: 100% 0;
+@font-face {
+    font-family: "ComfortaaSemiBold";
+    src: url("../fonts/comfortaa/static/Comfortaa-SemiBold.ttf") format("woff");
+}
+
+@font-face {
+    font-family: "ComfortaaRegular";
+    src: url("../fonts/comfortaa/static/Comfortaa-Regular.ttf") format("woff");
+}
+
+
+body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#sky, #sun, #forest-first-layer, #herbe, #sol, #snail {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+}
+
+#sky {
+    background-color: rgb(36, 200, 255);
+    background: linear-gradient(to bottom, #9be2fe 0%,#67d1fb 100%); 
+}
+
+#sun {
+    background-image: url("../img/sun.svg");
+    background-repeat: no-repeat;
+    background-position: 85% 5%;
+    background-size: 15%;
+    filter: blur(2px);
+}
+
+#forest-first-layer {
+    background-image: url('../img/arbres.png');
+    background-repeat: repeat-x;
+    background-size: 90%;
+    background-position: 0 80%;
+    /* overflow: hidden; */
+    animation: forest-first-layer 60s linear 0s infinite alternate;
+    -webkit-animation: forest-first-layer 60s linear 0s infinite;
+}
+
+@-webkit-keyframes forest-first-layer {
+    100% {
+        background-position: 800px 80%;
     }
 }
 
-@keyframes move {
-    from {
-        background-position: 0 0;
-    }to {
-        background-position: 100% 0;
+@keyframes forest-first-layer {
+    100%{
+        background-position: 800px 80%;
+    }
+}
+
+#herbe {
+    top: 70%;
+    height: 30%;
+    background-image: url(../img/herbe.png);
+    background-position: 0 0;
+    animation: herbe 22s linear 0s infinite alternate;
+    -webkit-animation: herbe 22s linear 0s infinite;
+}
+
+@-webkit-keyframes herbe {
+    100% {
+        background-position: 700% 0;
+    }
+}
+
+@keyframes herbe {
+    100%{
+        background-position: 700% 0;
+    }
+}
+
+#sol {
+    top: 94%;
+    height: 6%;
+    background-image: url(../img/sol.svg);
+    background-position: 0 0;
+    animation: sol 25s linear 0s infinite alternate;
+    -webkit-animation: sol 25s linear 0s infinite;
+}
+
+@-webkit-keyframes sol {
+    100% {
+        background-position: 109% 0;
+    }
+}
+
+@keyframes sol {
+    100%{
+        background-position: 109% 0;
+    }
+}
+
+#snail {
+    display: flex;
+    justify-content: end;
+}
+
+
+#snail img {
+    border: none;
+    align-self: flex-end;
+    width: 200px;
+    object-fit: contain;
+    margin: 0 2% .5% 0;
+    animation: updown 0.7s ease-in-out 0s infinite alternate;
+    -webkit-animation: updown 0.7s ease-in-out 0s infinite alternate;
+}
+
+@-webkit-keyframes updown {
+    100% {
+        margin-bottom: calc(.5% - 8px);
+    }
+}
+
+@keyframes updown {
+    100%{
+        margin-bottom: calc(.5% - 8px);
     }
 }
 
@@ -39,8 +144,21 @@ img {
     border: 3px green solid;
 }
 
-h1, p, a {
-    font-family: Arial, Helvetica, sans-serif;
+h1, h2 {
+    color: brown;
+}
+
+h1 {
+    font-size: 30px;
+    font-family: "ClimateCrisis", Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-family: "ComfortaaRegular", Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-family: "ComfortaaRegular", Arial, Helvetica, sans-serif;
     color: rgb(0, 0, 0);
 }
 
@@ -48,9 +166,12 @@ a {
     text-decoration: none;
 }
 
-h1 {
-    color: brown;
-    font-size: 30px;
+a, p {
+    font-family: "ComfortaaSemiBold", Arial, Helvetica, sans-serif;
+}
+
+.content {
+    z-index: 1;
 }
 
 nav {
@@ -76,7 +197,7 @@ nav a {
     align-items: center;
     justify-content: center;
 
-    border-left: 10px solid brown;
+    border-left: 15px solid brown;
     border-bottom-right-radius: 7px;
     border-top-right-radius: 7px;
 
@@ -107,13 +228,12 @@ nav p {
 }
 
 main {
-    margin: 2% 10% 0 10%;
+    margin: 2% 20% 0 10%;
     padding: 2%;
 
-    width: 80%;
-
-    background-color: #FFF;
+    background-color: rgba(255, 255, 255, .8);
     backdrop-filter: blur(2px);
 
-    border-radius: 10px;
+    border-radius: 30px;
+    border-top-right-radius: 150px;
 }
