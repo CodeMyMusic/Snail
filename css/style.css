@@ -54,7 +54,7 @@ body {
     background-size: 90%;
     background-position: 0 80%;
     /* overflow: hidden; */
-    animation: forest-first-layer 60s linear 0s infinite alternate;
+    animation: forest-first-layer 60s linear 0s infinite;
     -webkit-animation: forest-first-layer 60s linear 0s infinite;
 }
 
@@ -75,7 +75,7 @@ body {
     height: 30%;
     background-image: url(../img/herbe.png);
     background-position: 0 0;
-    animation: herbe 22s linear 0s infinite alternate;
+    animation: herbe 22s linear 0s infinite;
     -webkit-animation: herbe 22s linear 0s infinite;
 }
 
@@ -96,7 +96,7 @@ body {
     height: 6%;
     background-image: url(../img/sol.svg);
     background-position: 0 0;
-    animation: sol 25s linear 0s infinite alternate;
+    animation: sol 25s linear 0s infinite;
     -webkit-animation: sol 25s linear 0s infinite;
 }
 
@@ -153,10 +153,6 @@ h1 {
     font-family: "ClimateCrisis", Arial, Helvetica, sans-serif;
 }
 
-h2 {
-    font-family: "ComfortaaRegular", Arial, Helvetica, sans-serif;
-}
-
 p {
     font-family: "ComfortaaRegular", Arial, Helvetica, sans-serif;
     color: rgb(0, 0, 0);
@@ -186,8 +182,6 @@ nav {
 }
 
 nav a {
-    cursor: pointer;
-
     background-color: #FFF;
     backdrop-filter: blur(2px);
 

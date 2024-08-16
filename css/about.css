@@ -1,10 +1,12 @@
-.cv-content {
+.info {
     height: 100%;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 31px 1fr;
     grid-template-rows: 1fr;
 }
+
+
 
 .left-column {
     grid-column: 1/3;
